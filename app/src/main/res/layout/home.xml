@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE"
+    android:background="#000000"
     android:orientation="vertical"
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
@@ -12,21 +12,13 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginTop="0dp"
-        android:background="#EEEEEE" >
+        android:background="#000000" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#000000" >
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/logo" />
 
             <TextView
                 android:id="@+id/textView1"
@@ -38,94 +30,80 @@
                 android:gravity="center"
                 android:text="@string/title"
                 android:textColor="#ffffff"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
-                android:typeface="serif" />
+                android:typeface="serif"
+                android:layout_alignParentBottom="true" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView1"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="26dp"
-                android:text="Hawk Headlines"
-                android:textColor="#ffffff"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView2"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/red"
-                android:backgroundTint="@android:color/background_light" />
-
-            <Button
-                android:id="@+id/buttonRecent"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_alignBaseline="@+id/buttonMap"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/spinner1"
-                android:layout_marginRight="34dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/when"/>
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="When?"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_below="@+id/buttonRecent"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="70dp"
-                android:layout_marginTop="12dp"
-                />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Where?"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_alignLeft="@+id/textView2"
-                android:layout_below="@+id/buttonMap"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="12dp"
-                />
-
-            <Button
-                android:id="@+id/buttonMap"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_below="@+id/spinner1"
-                android:layout_marginTop="30dp"
-                android:layout_alignLeft="@+id/textView2"
-                android:background="@drawable/directions" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/imageView"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="IIT Events"
-                android:textColor="#EEEEEE"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:typeface="serif" />
 
         </RelativeLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/buttonEvents"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/when"
+        android:layout_marginTop="94dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/scroll"
+        android:layout_marginEnd="40dp" />
+
+    <Button
+        android:id="@+id/buttonNews"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/directions"
+        android:layout_alignTop="@+id/buttonEvents"
+        android:layout_toStartOf="@+id/buttonEvents"
+        android:layout_marginEnd="70dp" />
+    <Button
+        android:id="@+id/buttonSports"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/when"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/scroll"
+        android:layout_below="@+id/buttonEvents"
+        android:layout_marginEnd="40dp" />
+
+    <Button
+        android:id="@+id/buttonMap"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/directions"
+        android:layout_alignTop="@+id/buttonSports"
+        android:layout_toStartOf="@+id/buttonSports"
+        android:layout_below="@+id/buttonNews"
+        android:layout_marginEnd="70dp" />
+
+    <Button
+        android:id="@+id/buttonFaculty"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/when"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/scroll"
+        android:layout_below="@+id/buttonSports"
+        android:layout_marginEnd="40dp" />
+
+    <Button
+        android:id="@+id/buttonStudents"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/directions"
+        android:layout_alignTop="@+id/buttonFaculty"
+        android:layout_toStartOf="@+id/buttonFaculty"
+        android:layout_below="@+id/buttonNews"
+        android:layout_marginEnd="70dp" />
+    <Button
+        android:id="@+id/buttonIITinNews"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/when"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/scroll"
+        android:layout_below="@+id/buttonStudents"
+        android:layout_marginEnd="40dp" />
+
 </RelativeLayout>
